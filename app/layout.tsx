@@ -10,7 +10,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      dynamic
+    >
       <html lang="en">
         <body>
           <Toaster />
@@ -19,4 +22,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </html>
     </ClerkProvider>
   );
-} 
+}
