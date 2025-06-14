@@ -27,3 +27,6 @@ dist-ssr
 .env
 
 .next
+
+# clerk configuration (can include secrets)
+/.clerk/
